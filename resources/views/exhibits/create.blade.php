@@ -26,7 +26,7 @@
     </div>
     <div class="form-group">
         <label for="new_exhibit_description" class="font-weight-bold">Description</label>
-        <textarea class="form-control" name="new_exhibit_description" id="new_exhibit_description" placeholder="Description...">{{ old('new_exhibit_description') }}"</textarea>
+        <textarea class="form-control" name="new_exhibit_description" id="new_exhibit_description" placeholder="Description...">{{ old('new_exhibit_description') }}</textarea>
     </div>
 
     <button type="submit" class="btn btn-primary float-right">Create</button>

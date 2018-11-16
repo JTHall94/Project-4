@@ -1,7 +1,8 @@
 @extends('layouts.card')
 
 @section('card-header')
-    Edit this Exhibit!
+<p class="text-center">Edit this Exhibit!</p>
+
 @endsection
 
 @section('card-content')
@@ -27,7 +28,7 @@
     </div>
     <div class="form-group">
         <label for="updated_exhibit_description" class="font-weight-bold">Description</label>
-        <textarea class="form-control" name="updated_exhibit_description" id="updated_exhibit_description" placeholder="Description...">{{ old('updated_exhibit_description') ? old('updated_exhibit_description') : $e->description}}"</textarea>
+        <textarea class="form-control" name="updated_exhibit_description" id="updated_exhibit_description" placeholder="Description...">{{ old('updated_exhibit_description') ? old('updated_exhibit_description') : $e->description}}</textarea>
     </div>
 
     <button type="submit" class="btn btn-primary float-right">Update</button>

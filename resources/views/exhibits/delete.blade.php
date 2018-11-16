@@ -1,7 +1,7 @@
 @extends('layouts.card')
 
 @section('card-header')
-    Edit this Exhibit!
+    <p class="text-center">Delete this Exhibit!</p>
 @endsection
 
 @section('card-content')
