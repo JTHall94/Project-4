@@ -20,11 +20,11 @@
               </div>
           @endif
           <p>This your dashboard! Here you can see all of the exhibits that you have created, and edit or delete them.</p>
-          <p>You can also create new exhbits, using the <a href="exhibits/create">create</a> link!</p>
+          <p>You can also create new exhbits, using the create link above!</p>
       </div>
   </div>
 
-  <div id="dashboardfeed">
+  <div id="dashboardfeed" class="mt-5">
     @foreach(Auth::user()->exhibits as $exhibit)
       <div class="card mt-3 mb-3">
         <div class="card-header clearfix exhibithead">
