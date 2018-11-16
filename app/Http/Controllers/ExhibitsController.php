@@ -37,7 +37,7 @@ class ExhibitsController extends Controller
         $e = new \App\Exhibits;
         $e->user_id = \Auth::id();
         $e->name = $request->input('new_exhibit_name');
-        $e->year = $request->input('new_exhibit_year');
+        $e->year_created = $request->input('new_exhibit_year');
         $e->artist = $request->input('new_exhibit_artist');
         $e->url = $request->input('new_exhibit_url');
         $e->description = $request->input('new_exhibit_description');
@@ -45,7 +45,7 @@ class ExhibitsController extends Controller
 
         $request->session()->flash('status', 'New exhibit created. Thanks!');
 
-        return redirect()->route('/');
+        return redirect('/');
     }
 
     /**
@@ -82,7 +82,7 @@ class ExhibitsController extends Controller
     {
         $e = \App\Exhibits::find($id);
         $e->name = $request->input('updated_exhibit_name');
-        $e->year = $request->input('updated_exhibit_year');
+        $e->year_created = $request->input('updated_exhibit_year');
         $e->artist = $request->input('updated_exhibit_artist');
         $e->url = $request->input('updated_exhibit_url');
         $e->description = $request->input('updated_exhibit_description');
@@ -96,7 +96,15 @@ class ExhibitsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+     public function destroy($id)
+     {
+         $e = \App\Exhibits::find($id);
+         $e->delete();
+
+         return redirect('home');
+     }
+
+    public function delete($id)
     {
         $e = \App\Exhibits::find($id);
         return view('exhibits/delete', compact('e'));

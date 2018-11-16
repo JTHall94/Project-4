@@ -3,7 +3,11 @@
 @extends('layouts.card')
 
 @section('card-header')
-    {{ Auth::user()->name }}
+    <div class="clearfix ml-4 mr-4">
+      <p class="float-left">{{ Auth::user()->name }}</p>
+      <p class="float-right"><a href="exhibits/create">Create</a></p>
+      <h3 class="text-center">Your Exhibits<h3>
+    </div>
 @endsection
 
 @section('card-content')
@@ -21,17 +25,17 @@
   </div>
 
   <div id="dashboardfeed">
-    @foreach($exhibits as $exhibit)
-      <div class="card">
-        <div class="card-header clearfix">
+    @foreach(Auth::user()->exhibits as $exhibit)
+      <div class="card mt-3 mb-3">
+        <div class="card-header clearfix exhibithead">
           <p class="float-left"><a href="exhibits/{{ $exhibit->id }}/edit">Edit</a></p>
           <p class="float-right"><a href="exhibits/{{ $exhibit->id }}/delete">Delete</a></p>
-          <h3 class="text-center">{{$exhibit->name}} - ({{$exhibit->year_created}})</h3>
+          <h4 class="text-center">{{$exhibit->name}} - ({{$exhibit->year_created}})</h4>
         </div>
         <img class="card-img" src="{{$exhibit->url}}">
         <div class="card-body">
-          <h6>{{$exhibit->artist}}</h6>
-          <p><a href="{{$exhibit->url}}"></a></p>
+          <h6>Artist: {{$exhibit->artist}}</h6>
+          <p><a href="{{$exhibit->url}}">Source</a></p>
           <p>{{$exhibit->description}}</p>
         </div>
       </div>

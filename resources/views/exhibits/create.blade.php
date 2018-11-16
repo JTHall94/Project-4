@@ -6,7 +6,7 @@
 
 @section('card-content')
 
-<form id="createExhibit" class="form clearfix pb-3" action="" method="post">
+<form id="createExhibit" class="form clearfix pb-3" action="/exhibits" method="post">
     @csrf
     <div class="form-group">
         <label for="new_exhibit_name" class="font-weight-bold">Name</label>

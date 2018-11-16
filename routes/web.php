@@ -18,3 +18,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/exhibits', 'ExhibitsController')->middleware('auth');
+Route::get('/exhibits/{id}/delete', 'ExhibitsController@delete');
