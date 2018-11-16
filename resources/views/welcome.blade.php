@@ -25,6 +25,9 @@
           <h6>Artist: {{$exhibit->artist}}</h6>
           <p><a href="{{$exhibit->url}}">Source</a></p>
           <p>{{$exhibit->description}}</p>
+          <p class="mt-5">Created: {{$exhibit->created_at}}</p>
+          <p>Updated: {{$exhibit->updated_at}}</p>
+
         </div>
       </div>
     @endforeach
