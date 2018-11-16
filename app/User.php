@@ -27,4 +27,8 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function exhibits() {
+      return $this->hasMany('\App\Exhibits')->orderBy('name');
+    }
 }
