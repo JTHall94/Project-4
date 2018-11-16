@@ -14,11 +14,11 @@
         <input type="text" class="form-control" id="updated_exhibit_name" name="updated_exhibit_name" placeholder="Exhibit Name..." value="{{ $e->name}}" readonly>
     </div>
     <div class="form-group">
-        <label for="updated_exhibit_year" class="font-weight-bold">Name</label>
+        <label for="updated_exhibit_year" class="font-weight-bold">Year</label>
         <input type="text" class="form-control" id="updated_exhibit_year" name="updated_exhibit_year" placeholder="Year Created..." value="{{ $e->year_created}}" readonly>
     </div>
     <div class="form-group">
-        <label for="updated_exhibit_artist" class="font-weight-bold">Name</label>
+        <label for="updated_exhibit_artist" class="font-weight-bold">Artist</label>
         <input type="text" class="form-control" id="updated_exhibit_artist" name="updated_exhibit_artist" placeholder="Arist Name..." value="{{ $e->artist}}" readonly>
     </div>
     <div class="form-group">

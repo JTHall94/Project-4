@@ -14,11 +14,11 @@
 
   <div class="card mb-5">
       <div class="card-body">
-          @if (session('status'))
+          <!-- @if (session('status'))
               <div class="alert alert-success" role="alert">
                   {{ session('status') }}
               </div>
-          @endif
+          @endif -->
           <p>This your dashboard! Here you can see all of the exhibits that you have created, and edit or delete them.</p>
           <p>You can also create new exhbits, using the create link above!</p>
       </div>
